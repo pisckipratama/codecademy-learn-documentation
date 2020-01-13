@@ -327,3 +327,17 @@ const monsterFactory = (name, age, energySource, catchPhrase) => {
 const herScare = monsterFactory('Fenti', 21, 'Be Loved', 'aaaaa!');
 herScare.scare() // Output: aaaaa!
 ```
+
+### Property Value Shorthand
+Kita bisa mempersingkat penulisan factory function dengan metode property value shorthand. Berikut contoh syntax-nya:
+```javascript
+const myPassion = (jobs, hobby) => {
+    return {
+        jobs,
+        hobby
+    }
+};
+
+const myDataPassion = myPassion('backend', 'soccer');
+console.log(myDataPassion.hobby); // Output: soccer
+```
