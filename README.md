@@ -361,3 +361,18 @@ console.log(residence); // Output: Transylvania
 const { early } = vampire.preferences.morning;
 console.log(early); // Output: hahaha
 ```
+
+### Object.key()
+Untuk mengambil key dan dijadikan array. Contoh syntax:
+```javascript
+const myGirl = {
+	name: 'Fenti Rahmawati',
+  age: 21,
+  degree: 'Psychology',
+  isBeauty: true,
+  isMarried: false
+};
+
+const myGirlKeys = Object.keys(myGirl);
+console.log(myGirlKeys) // Output: [ 'name', 'age', 'degree', 'isBeauty', 'isMarried' ]
+```
