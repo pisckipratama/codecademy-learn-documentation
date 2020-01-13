@@ -341,3 +341,23 @@ const myPassion = (jobs, hobby) => {
 const myDataPassion = myPassion('backend', 'soccer');
 console.log(myDataPassion.hobby); // Output: soccer
 ```
+
+### Destructured Assignment
+Teknik ini digunakan untuk memanggil value dari object dengan cara shorthand.
+```javascript
+const vampire = {
+    name: 'Dracula',
+    residence: 'Transylvania',
+    preferences: {
+        day: 'stay inside',
+        night: 'satisfy appetite',
+        morning: {early: 'hahaha', atEight: 'huhuhu'}
+    }
+};
+
+const { residence } = vampire;
+console.log(residence); // Output: Transylvania
+
+const { early } = vampire.preferences.morning;
+console.log(early); // Output: hahaha
+```
