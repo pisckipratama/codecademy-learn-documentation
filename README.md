@@ -310,3 +310,20 @@ const robot = {
 robot.numOfSensors = 100;
 console.log(robot.numOfSensors); // Output: 100
 ```
+
+### Factory Function
+Dengan factory function kita bisa membuat banyak instance object dengan cepat. Contoh syntax:
+```javascript
+const monsterFactory = (name, age, energySource, catchPhrase) => {
+    return {
+        name: name,
+        age: age,
+        energySource: energySource,
+        scare() {
+            console.log(catchPhrase);
+        }
+    }
+}
+const herScare = monsterFactory('Fenti', 21, 'Be Loved', 'aaaaa!');
+herScare.scare() // Output: aaaaa!
+```
