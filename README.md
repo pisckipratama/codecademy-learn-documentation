@@ -251,3 +251,17 @@ const cat = {
 
 cat.diet(); // undefined
 ```
+
+### Privacy Object
+Biasanya delevoper JavaScript menamai property dengan awalan <i>underscore</i> (`_`) yang berarti property tidak harus diubah. Berikut contoh syntax-nya:
+```javascript
+const robot = {
+    _energyLevel: 100,
+    recharge() {
+        this._energyLevel += 30;
+        console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+    }
+};
+
+console.log(robot.recharge());
+```
