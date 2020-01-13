@@ -376,3 +376,15 @@ const myGirl = {
 const myGirlKeys = Object.keys(myGirl);
 console.log(myGirlKeys) // Output: [ 'name', 'age', 'degree', 'isBeauty', 'isMarried' ]
 ```
+
+### Object.entries()
+Untuk menampilkan key dan value dan dijadikan array. Contoh syntax:
+```javascript
+const object1 = {
+    a: 'somestring',
+    b: 42
+};
+
+const antrian = Object.entries(object1);
+console.log(antrian); // Output: [ [ 'a', 'somestring' ], [ 'b', 42 ] ]
+```
