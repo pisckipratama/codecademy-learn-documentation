@@ -226,19 +226,14 @@ let uhuy = {
 };
 
 for (let crewMember in uhuy.crew) {
-    console.log(`${crewMember}: 
-    ${uhuy.crew[crewMember].degree}`)
+    console.log(`${crewMember}: ${uhuy.crew[crewMember].degree}`)
 }
 
 // Output:
-// captain: 
-//     Computer Engineering
-// chief officer: 
-//     Aerospace Engineering
-// medic: 
-//     Physics
-// translator: 
-//     Conservation Science
+// captain: Computer Engineering
+// chief officer: Aerospace Engineering
+// medic: Physics
+// translator: Conservation Science
 ```
 
 ### Arrow Function with this keyword
