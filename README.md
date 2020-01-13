@@ -240,3 +240,19 @@ for (let crewMember in uhuy.crew) {
 // translator: 
 //     Conservation Science
 ```
+
+### Arrow Function with this keyword
+Untuk menggunakan `this` keyword dalam arrow function di object *sangat tidak disarankan* karena arrow function pada dasarnya sudah mengandung `this`. Dengan demikian `this` yang menggunakan arrow function akan menghasilkan nilai `undefined`. Contoh syntax:
+```javascript
+const cat = {
+    dietType: 'carnivore',
+    makeSound() {
+        console.log('Miauww');
+    },
+    diet: () => {
+        console.log(this.dietType);
+    }
+}
+
+cat.diet(); // undefined
+```
