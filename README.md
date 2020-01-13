@@ -388,3 +388,19 @@ const object1 = {
 const antrian = Object.entries(object1);
 console.log(antrian); // Output: [ [ 'a', 'somestring' ], [ 'b', 42 ] ]
 ```
+
+### Object.assign()
+untuk menambah key dan value dari suatu object. Contoh syntax:
+```javascript
+const object1 = {
+    a: 'somestring',
+    b: 42
+};
+
+const newRobot = Object.assign(object1, {
+    laserBlaster: true,
+    voiceRecognition: true
+})
+
+console.log(newRobot); // Output: { a: 'somestring', b: 42, laserBlaster: true, voiceRecognition: true }
+```
