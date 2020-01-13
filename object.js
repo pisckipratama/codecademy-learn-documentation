@@ -120,6 +120,50 @@ let uhuy = {
 };
 
 for (let crewMember in uhuy.crew) {
-    console.log(`${crewMember}: 
-    ${uhuy.crew[crewMember].degree}`)
+    console.log(`${crewMember}: ${uhuy.crew[crewMember].degree}`)
+}
+console.log(' ');
+
+// contoh 2
+let spaceship2 = {
+    crew: {
+        captain: {
+            name: 'Lily',
+            degree: 'Computer Engineering',
+            cheerTeam() {
+                console.log('You got this!')
+            }
+        },
+        'chief officer': {
+            name: 'Dan',
+            degree: 'Aerospace Engineering',
+            agree() {
+                console.log('I agree, captain!')
+            }
+        },
+        medic: {
+            name: 'Clementine',
+            degree: 'Physics',
+            announce() {
+                console.log(`Jets on!`)
+            }
+        },
+        translator: {
+            name: 'Shauna',
+            degree: 'Conservation Science',
+            powerFuel() {
+                console.log('The tank is full!')
+            }
+        }
+    }
+};
+
+// Write your code below
+for (let crewMembers in spaceship2.crew) {
+    console.log(`${crewMembers}: ${spaceship2.crew[crewMembers].name}`)
+}
+console.log(' ');
+
+for (let crewDegree in spaceship2.crew) {
+    console.log(`${spaceship2.crew[crewDegree].name} : ${spaceship2.crew[crewDegree].degree}`)
 }
