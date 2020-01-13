@@ -265,3 +265,21 @@ const robot = {
 
 console.log(robot.recharge());
 ```
+
+### Getters Object
+Getters adalah metode yang mendapatkan dan mengembalikan properti internal pada suatu object. Tetapi mereka dapat melakukan lebih dari sekedar mengambil nilai property. Contoh syntax:
+```javascript
+const person = {
+    _firstName: 'Fenti',
+    _lastName: 'Rahmawati',
+    get fullName() {
+        if (this._firstName && this._lastName) {
+            return `${this._lastName} ${this._firstName}`;
+        } else {
+            return 'Missing a first name or a last name.';
+        }
+    }
+}
+
+console.log(person.fullName); // Output: Rahmawati Fenti
+```
