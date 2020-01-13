@@ -1,6 +1,6 @@
 ## MY Notes
 
-#### Fundamental data type JavaScript
+### Fundamental data type JavaScript
 - Number
 - String
 - Boolean
@@ -11,29 +11,29 @@
 
 urutan 6 pertama merupakan tipe data primitif
 
-#### Interpolation 
+### Interpolation 
 yaitu mengisi value variable menggunakan backtick.
 
-#### List Falsy
+### List Falsy
 - 0
 - string kosong ("") atau ('')
 - null
 - Undifined
 - NaN
 
-#### Reduce Array 
+### Reduce Array 
 yaitu digunakan untuk mengakumulasikan atau mengurangi nilai berdasarkan elemen di dalam array.
 
-#### Helper Function
+### Helper Function
 yaitu fungsi yang memanggil fungsi lainnya untuk mengeksekusi sebuah program.
 
-#### Function Expression
+### Function Expression
 adalah fungsi yang dideklarasikan di dalam variable. Biasanya menggunakan keyword ```const``` untuk deklarasi variable-nya. Fungsi ini juga tidak bisa di ```hoisting``` seperti di fungsi deklarasi.
 
-#### Anonymous Function
+### Anonymous Function
 adalah fungsi yang tidak memiliki nama.
 
-#### Arrow Function
+### Arrow Function
 syntax function javascript terbaru dari ES6 dengan menggunakan ```() =>.``` Menghilangkan keyword ```function```. Contoh :
 ``` javascript
 const rectangleArea = (width, height) => {
@@ -42,16 +42,16 @@ const rectangleArea = (width, height) => {
 };
 ```
 
-#### Concise Body Arrow Function
+### Concise Body Arrow Function
 JavaScript arrow function bisa diringkas dengan menggunakan satu line saja. Contoh:
 ```javascript
 const squareNum = (num) => num * num;
 ```
 
-#### Scope Pollution
+### Scope Pollution
 Mempunyai banyak variable global bisa menyebabkan beberapa masalah dalam program. Dengan demikian scope pollution adalah ketika kita memiliki banyak global variable yang ada di global namespace atau ketika kita menggunakan ulang variable di berbagai cakupan.
 
-#### Practice Good Scoping
+### Practice Good Scoping
 Untuk penulisan scope terbaik dalam javascript bisa menggunakan block scope atau contoh seperti program berikut:
 ```javascript
 const logVisibleLightWaves = () => {
@@ -72,7 +72,7 @@ logVisibleLightWaves();
 ```
 Walaupun kita menggunakan block scope, kita masih mendapatkan Scope Pollution karena menggunakan kembali variable yang sama sebanyak 2 kali. Dengan demikian lebih baik menggunakan variable di dalam block.
 
-#### Function as Data
+### Function as Data
 Ada kalanya kita menuliskan nama function dengan karakter yang banyak, untuk memudahkan kita fungsi bisa ditampung lagi dalam satu variable, contoh:
 ```javascript
 const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
@@ -89,15 +89,15 @@ is2p2();
 Code diatas menjelaskan bahwa function ```checkThatTwoPlusTwoEqualsFourAMillionTimes()``` disimpan di variable ```is2p2```, sehingga dalam pemanggilan fungsi tidak perlu ribet.
 <br>
 
-#### Function Name
+### Function Name
 Pada suatu saat kita pun bakal menjumpai bahwa kita lupa dengan nama fungsi yang telah kita buat dan disimpan ke suatu varible, untuk itu kita memerlukan method name function untuk mengecek nama dari fungsi tersebut, contoh: 
 ```javascript
 console.log(is2p2.name);
 ```
-#### Callback Function
+### Callback Function
 fungsi callback adalah fungsi yang diteruskan sebagai argumen ke fungsi lain.
 
-#### Iterators - .forEach() Method
+### Iterators - .forEach() Method
 forEach method mengambil argument fungsi callback. Return value forEach akan selalu berbentuk ```undefined```. Penulisan syntax forEach akan lebih baik menggunakan ES6, tetapi masih bisa juga menggunakan fungsi declarasi yang biasa, contoh penulisan syntax:
 ```javascript
 const groceries = ['brown sugar', 'salt', 'walnuts', 'milk'];
@@ -118,7 +118,7 @@ function printGrocery(element){
 groceries.forEach(printGrocery);
 ```
 
-#### Iterators - .map() Method
+### Iterators - .map() Method
 `map()` method akan menghasilkan array baru ketika `map()` dipanggil akan dibutuhkan suatu argument di dalam fungsi callback. Cara kerja `map()` sama seperti `forEach()`, yang membedakan nya adalah `.map()` mengembalikan array baru. Contoh penulisan syntax:
 ```javascript
 const numbers = [1, 2, 3, 4, 5]; 
@@ -131,7 +131,7 @@ console.log(numbers); // Output: [1, 2, 3, 4, 5]
 console.log(bigNumbers) // Output: [10, 20, 30, 40, 50]
 ```
 
-#### Iterators - .filter() Method
+### Iterators - .filter() Method
 Membuat array baru dengan semua elemen yang bernilai true yang telah diimplementasikan oleh fungsi yang disediakan. Contoh syntax
 ```javascript
 const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door'];
@@ -145,7 +145,7 @@ console.log(shortWords);
 ```
 Kode diatas berisi perintah untuk menampilkan element dalam array `words` yang jumlah `length` nya lebih kecil sama dengan 5.
 
-#### Iterators - .findIndex() Method
+### Iterators - .findIndex() Method
 Akan mengembalikan index element pertama yang bernilai true pada fungsi callback. Contoh syntax:
 ```javascript
 const jumbledNums = [123, 25, 78, 5, 9];
@@ -158,7 +158,7 @@ console.log(lessThanTen);
 ```
 Kode menghasilkan output 3 karena index pertama yang bernilai true dalam function diatas adalah index ke-3.
 
-#### Iterator - .reduce() Method
+### Iterator - .reduce() Method
 Method `.reduce()` mengembalikan nilai tunggal setelah iterasi melalui elemen-elemen array, sehingga mengurangi array. Contoh syntax:
 ```javascript
 const nomer = [1, 2, 4, 5, 10];
@@ -178,7 +178,7 @@ const summedNomer = nomer.reduce((accumulator, currentValue) => {
 console.log(summedNomer); // Output: 122
 ```
 
-#### Iterator - .some() Method
+### Iterator - .some() Method
 Metode some () menguji apakah setidaknya satu elemen dalam array bernilai true yang dilaksanakan oleh fungsi yang disediakan. Ini mengembalikan nilai Boolean. Contoh syntax:
 ```javascript
 const uhuy = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
@@ -190,7 +190,7 @@ console.log(missing); // Output: true
 ```
 Kode diatas menghasilkan `true` karena salah satu element dari array `uhuy` ada yang memiliki panjang kurang dari 6 karakter.
 
-#### Iterator - .every() Method
+### Iterator - .every() Method
 Method ini sama seperti `some()` tetapi jika disalah satu element ada yang bernilai `false` maka akan mengembalikan nilai `false`. Contoh syntax:
 ```javascript
 const isBelowThresHold = (currentValue) => currentValue < 40;
@@ -200,10 +200,10 @@ console.log(array1.every(isBelowThresHold)); // Output: false
 ```
 Kode diatas akan menghasilkan boolean `false` karena disalah satu element array `isBelowThresHold` ada yang bernilai `false` dalam function-nya.
 
-#### Object Pass by Reference
+### Object Pass by Reference
 Ini berarti ketika kita mem `pass` variabel yang diassign ke object dan ke fungsi sebagai argument, komputer menerjemahkan nama parameter sebagai menunjuk ke ruang di memori yang memegang object itu. Akibatnya, fungsi yang mengubah properti objek sebenarnya bermutasi objek secara permanen (bahkan ketika objek ditugaskan ke variabel const).
 
-#### Looping Through Object
+### Looping Through Object
 Untuk me-looping object bisa menggunakan `for...in`. Contoh syntax:
 ```javascript
 let uhuy = {
