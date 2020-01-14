@@ -409,24 +409,24 @@ console.log(newRobot); // Output: { a: 'somestring', b: 42, laserBlaster: true, 
 Adalah sebuah tool yang memungkinkan developer bisa membuat object yang sama dengan cepat. Contoh penulisan:
 ```javascript
 class Dog {
-    constructor(name) {
+    constructor(name) { // custructor
         this._name = name;
         this._behavior = 0;
     }
 
-    get name() {
+    get name() { // getter method 
         return this._name;
     }
-    get behavior() {
+    get behavior() { // getter method
         return this._behavior;
     }
 
-    incrementBehavior() {
+    incrementBehavior() { // method
         this._behavior++;
     }
 }
 
-const halley = new Dog('Halley');
+const halley = new Dog('Halley'); // instance
 console.log(halley.name); // Output: Halley
 console.log(halley.behavior); // Output: 0
 halley.incrementBehavior(); 
