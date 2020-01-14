@@ -492,3 +492,29 @@ Dalam inheritance ada 2 keyword yang wajib yaitu :
 - `super`, untuk memanggil constructor parent class, dalam contoh code diatas `super(name)` berarti mengambil argument `name` dari `HospitalEmployee` (parent class) ke `Nurse` (child class).
 
 <b>NOTICE:</b> `super` wajib dipanggil di awal construction.
+
+### Static Methods
+Adalah methods yang hanya bisa dijalankan diparent classnya dan tidak perlu untuk menginstance class nya. Contoh syntax:
+```javascript
+class ClubSepakbola {
+    constructor(name) {
+        this._name = name;
+        this._behavior = 0;
+    }
+
+    static generateName() {
+        const names = ['Arema', 'Persib', 'Persija', 'Persebaya', 'Bali United'];
+        const randomNumber = Math.floor(Math.random() * 5);
+        return names[randomNumber];
+    }
+
+    get name() {
+        return this._name;
+    }
+}
+
+console.log(ClubSepakbola.generateName()); // output: random club sepakbola
+
+const pelatihClub = new ClubSepakbola('Rene Alberts'); // instance
+console.log(pelatihClub.generateName()); // error
+```
