@@ -432,3 +432,62 @@ console.log(halley.behavior); // Output: 0
 halley.incrementBehavior(); 
 console.log(halley.behavior); // Output: 0
 ```
+Ada beberapa bagian dari class yang perlu diketahui, yaitu:
+- `constructor` yaitu method yang harus dipanggil setiap membuat instance baru dalam class. Setiap parameter harus menggunakan keyword `this`.
+- `instance` yaitu sebuah object yang berisi nama property dan method class tersebut. Tetapi dengan nilai value yang unique.
+- `methods` yaitu perilaku atau fungsi yang bisa dilakukan oleh class tersebut.
+
+Untuk contoh penulisan bisa dilihat di contoh syntax diatas yang sudah diberi keterangan.
+
+### Inheritance
+Menurunkan class, terdiri dari `parent class` dan `child class`. Parent class merupakan class yang inti dan child class merupakan class yang diturunkan. Berikut syntax penulisannya:
+```javascript
+// => parent class
+class HospitalEmployee {
+    constructor(name) {
+        this._name = name;
+        this._remainingVacationDays = 20;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    get remainingVacationDays() {
+        return this._remainingVacationDays;
+    }
+
+    takeVacationDays(daysOff) {
+        this._remainingVacationDays -= daysOff;
+    }
+}
+
+// => child class
+class Nurse extends HospitalEmployee {
+    constructor(name, certifications) {
+        super(name);
+        this._certifications = certifications;
+    }
+
+    get certifications() {
+        return this._certifications;
+    }
+
+    addCertification(newCertification) {
+        this._certifications.push(newCertification);
+    }
+}
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']);
+console.log(nurseOlynyk);
+
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
+```
+Dalam inheritance ada 2 keyword yang wajib yaitu :
+- `extends`, keyword ini bertugas membuat method yang ada di parent class ke dalam child class.
+- `super`, untuk memanggil constructor parent class, dalam contoh code diatas `super(name)` berarti mengambil argument `name` dari `HospitalEmployee` (parent class) ke `Nurse` (child class).
+<b>NOTICE:</b> `super` wajib dipanggil di awal construction.
