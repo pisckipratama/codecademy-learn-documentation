@@ -365,16 +365,16 @@ console.log(early); // Output: hahaha
 ### Object.key()
 Untuk mengambil key dan dijadikan array. Contoh syntax:
 ```javascript
-const myGirl = {
-	name: 'Fenti Rahmawati',
-  age: 21,
-  degree: 'Psychology',
-  isBeauty: true,
-  isMarried: false
+const myWish = {
+    role: 'Programmer',
+    expert: 'JavaScript',
+    degree: 'Backend Web Developer',
+    minSalary: 10000000,
+    hasOwnHome: true,
 };
 
 const myGirlKeys = Object.keys(myGirl);
-console.log(myGirlKeys) // Output: [ 'name', 'age', 'degree', 'isBeauty', 'isMarried' ]
+console.log(myGirlKeys) // Output: [ 'role', 'expert', 'degree', 'minSalary', 'hasOwnHome' ]
 ```
 
 ### Object.entries()
