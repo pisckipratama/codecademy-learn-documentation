@@ -516,5 +516,5 @@ class ClubSepakbola {
 console.log(ClubSepakbola.generateName()); // output: random club sepakbola
 
 const pelatihClub = new ClubSepakbola('Rene Alberts'); // instance
-console.log(pelatihClub.generateName()); // error
+// console.log(pelatihClub.generateName()); // will output error
 ```
