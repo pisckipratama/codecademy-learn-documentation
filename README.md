@@ -404,3 +404,31 @@ const newRobot = Object.assign(object1, {
 
 console.log(newRobot); // Output: { a: 'somestring', b: 42, laserBlaster: true, voiceRecognition: true }
 ```
+
+### Classes
+Adalah sebuah tool yang memungkinkan developer bisa membuat object yang sama dengan cepat. Contoh penulisan:
+```javascript
+class Dog {
+    constructor(name) {
+        this._name = name;
+        this._behavior = 0;
+    }
+
+    get name() {
+        return this._name;
+    }
+    get behavior() {
+        return this._behavior;
+    }
+
+    incrementBehavior() {
+        this._behavior++;
+    }
+}
+
+const halley = new Dog('Halley');
+console.log(halley.name); // Output: Halley
+console.log(halley.behavior); // Output: 0
+halley.incrementBehavior(); 
+console.log(halley.behavior); // Output: 0
+```
