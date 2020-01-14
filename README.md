@@ -490,4 +490,5 @@ console.log(nurseOlynyk.certifications);
 Dalam inheritance ada 2 keyword yang wajib yaitu :
 - `extends`, keyword ini bertugas membuat method yang ada di parent class ke dalam child class.
 - `super`, untuk memanggil constructor parent class, dalam contoh code diatas `super(name)` berarti mengambil argument `name` dari `HospitalEmployee` (parent class) ke `Nurse` (child class).
+
 <b>NOTICE:</b> `super` wajib dipanggil di awal construction.
