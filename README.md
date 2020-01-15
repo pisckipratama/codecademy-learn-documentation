@@ -518,3 +518,47 @@ console.log(ClubSepakbola.generateName()); // output: random club sepakbola
 const pelatihClub = new ClubSepakbola('Rene Alberts'); // instance
 // console.log(pelatihClub.generateName()); // will output error
 ```
+
+### Babel
+adalah library javascript untuk mengubah syntax ES6 ke ES5 agar bisa dijalankan di browser yang tidak compatibel dengan ES6.
+
+Langkah-langkah install babel, sebelumnya buat dulu folder src, dan masukkan file `main.js` yang berisi syntax ES6, berikut perintahnya:
+- ```npm install babel-cli```
+- ```npm install babel-preset-env``` 
+- ```npm run build```
+
+Setelah 3 perintah tersebut dijalankan, cek apakah ada folder `/lib` dan berisikan file `main.js`, file tersebut merupakan syntax ES5-nya.
+
+### Babel npm init
+Perintah `npm init` untuk setup project JavaScript ketika menjalankan npm run build, akan menghasilak json file dengan nama `package.json` yang berisikan informasi tentang project yang telah disetup menggunakan `npm init`. Lalu bisa menggunakan perintah yang sama.
+
+### Babel .babelrc
+Untuk menspesifikasikan javascript version dan versi lainnya. Buat file `.babelrc` dengan perintah: `touch .babelrc`
+
+Setelah itu isi file `.babelrc` tersebut dengan teks berikut:
+```json
+{
+  "presets": ["env"]
+}
+```
+Ketika babel dijalankan ia akan menentukan versi javascript yang telah diinisialisasi. Untuk perintah `["env"]` ia akan menginstruksikan babel untuk mengconvert ES6 ke ES5.
+
+### Babel Source Lib
+Ini adalah langkah terakhir untuk mengkonvert ES6 ke ES5, kita butuh `package.json` untuk melakukan converting. Di dalam `package.json` ada property yang bernama `scripts` yang menampung sebuah object untuk menspesifikasikan command line shortcuts. Kira kira seperti ini:
+```json
+...
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+}, ...
+```
+Untuk mensetting babel kita perlu menambahkan beberapa baris perintah menjadi seperti berikut:
+```json
+...
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "babel src -d lib"
+}
+```
+
+### Babel build
+Setelah melakukan installasi, initialize, dan menambah script build, sekarang babel siap untuk dieksekusi. Kita hanya perlu menjalankan perintah `npm run build`
