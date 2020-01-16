@@ -562,3 +562,34 @@ Untuk mensetting babel kita perlu menambahkan beberapa baris perintah menjadi se
 
 ### Babel build
 Setelah melakukan installasi, initialize, dan menambah script build, sekarang babel siap untuk dieksekusi. Kita hanya perlu menjalankan perintah `npm run build`
+
+### Modules
+Javascript modules sering digunakan untuk export program yang akan digunakan oleh program lain.
+
+### Modules (module.exports)
+```javascript
+// contoh 1
+let Airplane = {};
+Airplane.myAirplane = "StarJet";
+
+module.exports = Airplane;
+
+// contoh 2
+module.exports = {
+  myAirplane: "CloudJet",
+  displayAirplane: function() {
+    return this.myAirplane;
+  }
+};
+```
+
+### Modules (require)
+```javascript
+const Airplane = require('./1-airplane.js');
+
+function displayAirplane() {
+  console.log(Airplane.myAirplane);
+}
+
+displayAirplane();
+```
